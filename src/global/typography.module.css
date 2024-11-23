@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@500);
+
+:root {
+    --in-font-web-inter: 'Inter';
+
+    --in-font-size-label-xsmall: 12px;
+    --in-font-weight-xsmall: 500; 
+    --in-letter-spacing-label-xsmall: 0.5px;
+    --in-line-height-label-xsmall: 16px;
+
+    --in-font-size-label-small: 14px;
+    --in-font-weight-small: 500; 
+    --in-letter-spacing-label-small: 0.5px;
+    --in-line-height-label-small: 16px;
+
+    --in-font-size-label-medium: 16px;
+    --in-font-weight-medium: 500; 
+    --in-letter-spacing-label-medium: 0.5px;
+    --in-line-height-label-medium: 20px;
+
+    --in-font-size-label-large: 18px;
+    --in-font-weight-large: 500; 
+    --in-letter-spacing-label-large: 0.5px;
+    --in-line-height-label-large: 24px;
+
+    --in-typography-label-xsmall-font-family: var(--in-font-web-inter);
+    --in-typography-label-xsmall-font-size: var(--in-font-size-label-xsmall);
+    --in-typography-label-xsmall-font-weight: var(--in-font-weight-xsmall);
+    --in-typography-label-xsmall-font-line-height: var(--in-line-height-label-xsmall);
+    --in-typography-label-xsmall-font-letter-spacing: var(--in-letter-spacing-label-xsmall);
+
+    --in-typography-label-small-font-family: var(--in-font-web-inter);
+    --in-typography-label-small-font-size: var(--in-font-size-label-small);
+    --in-typography-label-small-font-weight: var(--in-font-weight-small);
+    --in-typography-label-small-font-line-height: var(--in-line-height-label-small);
+    --in-typography-label-small-font-letter-spacing: var(--in-letter-spacing-label-small);
+
+    --in-typography-label-medium-font-family: var(--in-font-web-inter);
+    --in-typography-label-medium-font-size: var(--in-font-size-label-medium);
+    --in-typography-label-medium-font-weight: var(--in-font-weight-medium);
+    --in-typography-label-medium-font-line-height: var(--in-line-height-label-medium);
+    --in-typography-label-medium-font-letter-spacing: var(--in-letter-spacing-label-medium);
+
+    --in-typography-label-large-font-family: var(--in-font-web-inter);
+    --in-typography-label-large-font-size: var(--in-font-size-label-large);
+    --in-typography-label-large-font-weight: var(--in-font-weight-large);
+    --in-typography-label-large-font-line-height: var(--in-line-height-label-large);
+    --in-typography-label-large-font-letter-spacing: var(--in-letter-spacing-label-large);
+}

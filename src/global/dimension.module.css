@@ -1,0 +1,11 @@
+:root {
+    --in-border-width-thin: 1px;
+    --in-border-radius-full: 1000px;
+    
+    --in-spacing-50: 4px;
+    --in-spacing-100: 8px;
+    --in-spacing-150: 12px;
+    --in-spacing-200: 16px;
+    --in-spacing-250: 20px;
+}
+  

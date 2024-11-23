@@ -1,0 +1,270 @@
+:host {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--in-border-radius-full);
+  cursor: pointer;
+
+  .border-layer {
+    background-color: var(--in-color-background-neutral-default);
+    border: var(--in-color-border-default) var(--in-border-width-thin) solid;
+    border-radius: var(--in-border-radius-full);
+  }
+}
+
+:host(.subtle) {
+  .border-layer {
+    background-color: var(--in-color-background-neutral-subtle-default);
+    border: transparent var(--in-border-width-thin) solid;
+  }
+}
+
+:host(.is-checked) {
+  .border-layer {
+    background-color: var(--in-color-background-selected-bold-default);
+    border: var(--in-color-border-selected) var(--in-border-width-thin) solid;
+    color: var(--in-color-text-inverse);
+  }
+}
+
+:host(.subtle.is-checked) {
+  .border-layer {
+    border: transparent var(--in-border-width-thin) solid;
+  }
+}
+
+:host([disabled]) {
+  pointer-events: none;
+}
+
+:host(.disabled) {
+  .border-layer{
+    color: var(--in-color-text-disabled);
+    background-color: var(--in-color-background-disabled);
+  }
+}
+
+:host(.disabled.is-checked) {
+  .border-layer {
+    border: var(--in-color-border-disabled) var(--in-border-width-thin) solid;
+  }
+}
+
+:host(.disabled.is-checked.subtle) {
+  .border-layer {
+    border: transparent var(--in-border-width-thin) solid;
+  }
+}
+
+:host(:hover) {
+  .border-layer{
+    background-color: var(--in-color-background-neutral-hovered);
+  }
+}
+
+:host(.subtle:hover) {
+  .border-layer {
+    background-color: var(--in-color-background-neutral-subtle-hovered);
+  }
+}
+
+:host(.is-checked:hover) {
+  .border-layer {
+    background-color: var(--in-color-background-selected-bold-hovered);
+    border: var(--in-color-border-selected) var(--in-border-width-thin) solid;
+  }
+}
+
+:host(.is-checked.subtle:hover) {
+  .border-layer {
+    border: var(--in-color-border-selected) var(--in-border-width-thin) solid;
+  }
+}
+
+:host(:active) {
+  .border-layer {
+    background-color: var(--in-color-background-neutral-pressed);
+  }
+}
+
+:host(.subtle:active) {
+  .border-layer {
+    background-color: var(--in-color-background-neutral-subtle-pressed);
+    border: var(--in-color-border-selected) var(--in-border-width-thin) solid;
+  }
+}
+
+:host(.is-checked:active) {
+  .border-layer {
+    background-color: var(--in-color-background-selected-bold-pressed);
+    border: var(--in-color-border-selected) var(--in-border-width-thin) solid;
+  }
+}
+
+:host(.full-width) {
+  width: 343px;
+}
+
+:host(.full-width) {
+  .main-container:not(.icon-only), .border-layer:not(.icon-only) {
+    justify-content: space-between;
+    width: -webkit-fill-available;
+  }
+}
+
+.border-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  display: flex;
+}
+
+:host([size='xs']) {
+  height: 24px;
+  min-width: 48px;
+  font-family: var(--in-typography-label-xsmall-font-family);
+  font-size: var(--in-typography-label-xsmall-font-size);
+  font-weight: var(--in-typography-label-xsmall-font-weight);
+  line-height: var(--in-typography-label-xsmall-font-line-height);
+  letter-spacing: var(--in-typography-label-xsmall-font-letter-spacing);
+
+  .icon-container:not(.icon-only) slot[name='icon']::slotted(*) {
+    padding-right: var(--in-spacing-50);
+  }
+  
+  .trailing-icon-container:not(.icon-only) slot[name='trailing-icon']::slotted(*) {
+    padding-left: var(--in-spacing-50);
+  }
+
+  --in-icon-size: 12px;
+}
+
+:host([size='xs']) .main-container {
+  padding: var(--in-spacing-50) var(--in-spacing-100);
+}
+
+:host([size='xs'][icon-only]) {
+  min-width: 24px;
+  width: 24px;
+
+  .border-layer {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+:host([size='sm']) {
+  height: 32px;
+  min-width: 56px;
+  font-family: var(--in-typography-label-small-font-family);
+  font-size: var(--in-typography-label-small-font-size);
+  font-weight: var(--in-typography-label-small-font-weight);
+  line-height: var(--in-typography-label-small-font-line-height);
+  letter-spacing: var(--in-typography-label-small-font-letter-spacing);
+
+  .icon-container:not(.icon-only) slot[name='icon']::slotted(*) {
+    padding-right: var(--in-spacing-100);
+  }
+  
+  .trailing-icon-container:not(.icon-only) slot[name='trailing-icon']::slotted(*) {
+    padding-left: var(--in-spacing-100);
+  }
+
+  --in-icon-size: 16px;
+}
+
+:host([size='sm']) .main-container {
+  padding: var(--in-spacing-100) var(--in-spacing-150);
+}
+
+:host([size='sm'][icon-only]) {
+  min-width: 32px;
+  width: 32px;
+
+  .border-layer {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+:host([size='default']) {
+  height: 40px;
+  min-width: 64px;
+  
+  font-family: var(--in-typography-label-medium-font-family);
+  font-size: var(--in-typography-label-medium-font-size);
+  font-weight: var(--in-typography-label-medium-font-weight);
+  line-height: var(--in-typography-label-medium-font-line-height);
+  letter-spacing: var(--in-typography-label-medium-font-letter-spacing);
+
+  .icon-container:not(.icon-only) slot[name='icon']::slotted(*) {
+    padding-right: var(--in-spacing-100);
+  }
+  
+  .trailing-icon-container:not(.icon-only) slot[name='trailing-icon']::slotted(*) {
+    padding-left: var(--in-spacing-100);
+  }
+
+  --in-icon-size: 24px;
+}
+
+:host([size='default']) .main-container {
+  padding: var(--in-spacing-100) var(--in-spacing-200);
+}
+
+:host([size='default'][icon-only]) {
+  min-width: 40px;
+  width: 40px;
+
+  .border-layer {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+:host([size='lg']) {
+  height: 48px;
+  min-width: 72px;
+  font-family: var(--in-typography-label-large-font-family);
+  font-size: var(--in-typography-label-large-font-size);
+  font-weight: var(--in-typography-label-large-font-weight);
+  line-height: var(--in-typography-label-large-font-line-height);
+  letter-spacing: var(--in-typography-label-large-font-letter-spacing);
+
+  .icon-container:not(.icon-only) slot[name='icon']::slotted(*) {
+    padding-right: var(--in-spacing-150);
+  }
+  
+  .trailing-icon-container:not(.icon-only) slot[name='trailing-icon']::slotted(*) {
+    padding-left: var(--in-spacing-150);
+  }
+
+  --in-icon-size: 24px;
+}
+
+:host([size='lg']) .main-container {
+  padding: var(--in-spacing-150) var(--in-spacing-250);
+}
+
+:host([size='lg'][icon-only]) {
+  min-width: 48px;
+  width: 48px;
+
+  .border-layer {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.icon-container, .trailing-icon-container {
+  display: flex;
+}
+
+.text-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

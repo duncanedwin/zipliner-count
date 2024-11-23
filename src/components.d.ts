@@ -6,56 +6,148 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    /**
+     * An icon component that uses google font icons.
+     * Code snippet: <inv-icon>settings</inv-icon>
+     */
+    interface InvIcon {
+    }
+    /**
+     * Toggle buttons switch between two states, providing a clear way to manage features or settings within applications or websites.
+     */
+    interface InvToggle {
         /**
-          * The first name
+          * Whether the toggle button is checked or not.
          */
-        "first": string;
+        "checked": boolean;
         /**
-          * The last name
+          * Disables interaction.
          */
-        "last": string;
+        "disabled": boolean;
         /**
-          * The middle name
+          * Sets the toggle button a wider fixed width. NB: Does not apply when the size is set to 'xs'.
          */
-        "middle": string;
+        "fullWidth": boolean;
+        /**
+          * Used to style the toggle button as an icon button. The icon in the "icon" slot is displayed when this is set to true.
+         */
+        "iconOnly": boolean;
+        /**
+          * Label text for the toggle button.
+         */
+        "label": string;
+        /**
+          * Size of the toggle button.
+         */
+        "size": 'default' | 'xs' | 'sm' | 'lg';
+        /**
+          * Changes the appearance of the toggle button to a subtle one.
+         */
+        "subtle": boolean;
     }
 }
+export interface InvToggleCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLInvToggleElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    /**
+     * An icon component that uses google font icons.
+     * Code snippet: <inv-icon>settings</inv-icon>
+     */
+    interface HTMLInvIconElement extends Components.InvIcon, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLInvIconElement: {
+        prototype: HTMLInvIconElement;
+        new (): HTMLInvIconElement;
+    };
+    interface HTMLInvToggleElementEventMap {
+        "click": any;
+    }
+    /**
+     * Toggle buttons switch between two states, providing a clear way to manage features or settings within applications or websites.
+     */
+    interface HTMLInvToggleElement extends Components.InvToggle, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLInvToggleElementEventMap>(type: K, listener: (this: HTMLInvToggleElement, ev: InvToggleCustomEvent<HTMLInvToggleElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLInvToggleElementEventMap>(type: K, listener: (this: HTMLInvToggleElement, ev: InvToggleCustomEvent<HTMLInvToggleElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLInvToggleElement: {
+        prototype: HTMLInvToggleElement;
+        new (): HTMLInvToggleElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "inv-icon": HTMLInvIconElement;
+        "inv-toggle": HTMLInvToggleElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    /**
+     * An icon component that uses google font icons.
+     * Code snippet: <inv-icon>settings</inv-icon>
+     */
+    interface InvIcon {
+    }
+    /**
+     * Toggle buttons switch between two states, providing a clear way to manage features or settings within applications or websites.
+     */
+    interface InvToggle {
         /**
-          * The first name
+          * Whether the toggle button is checked or not.
          */
-        "first"?: string;
+        "checked"?: boolean;
         /**
-          * The last name
+          * Disables interaction.
          */
-        "last"?: string;
+        "disabled"?: boolean;
         /**
-          * The middle name
+          * Sets the toggle button a wider fixed width. NB: Does not apply when the size is set to 'xs'.
          */
-        "middle"?: string;
+        "fullWidth"?: boolean;
+        /**
+          * Used to style the toggle button as an icon button. The icon in the "icon" slot is displayed when this is set to true.
+         */
+        "iconOnly"?: boolean;
+        /**
+          * Label text for the toggle button.
+         */
+        "label"?: string;
+        /**
+          * Dispatched when the toggle is clicked. Emits the checked value
+         */
+        "onClick"?: (event: InvToggleCustomEvent<any>) => void;
+        /**
+          * Size of the toggle button.
+         */
+        "size"?: 'default' | 'xs' | 'sm' | 'lg';
+        /**
+          * Changes the appearance of the toggle button to a subtle one.
+         */
+        "subtle"?: boolean;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "inv-icon": InvIcon;
+        "inv-toggle": InvToggle;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            /**
+             * An icon component that uses google font icons.
+             * Code snippet: <inv-icon>settings</inv-icon>
+             */
+            "inv-icon": LocalJSX.InvIcon & JSXBase.HTMLAttributes<HTMLInvIconElement>;
+            /**
+             * Toggle buttons switch between two states, providing a clear way to manage features or settings within applications or websites.
+             */
+            "inv-toggle": LocalJSX.InvToggle & JSXBase.HTMLAttributes<HTMLInvToggleElement>;
         }
     }
 }

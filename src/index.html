@@ -4,11 +4,104 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/build/zipliner-count.css" />
     <script type="module" src="/build/zipliner-count.esm.js"></script>
     <script nomodule src="/build/zipliner-count.js"></script>
   </head>
-  <body>
-    <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+  <body style="display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      gap: 16px;
+      background-color: rgba(246, 246, 244, 1);
+      font-family: 'Inter'">
+    <p>Intrinsic toggles in all sizes</p>
+    <inv-toggle label="Label"></inv-toggle>
+    <inv-toggle size="xs" label="Label"></inv-toggle>
+    <inv-toggle size="sm" label="Label"></inv-toggle>
+    <inv-toggle size="lg" label="Label"></inv-toggle>
+
+    <p>Full width toggles in all sizes</p>
+    <inv-toggle full-width label="Label"></inv-toggle>
+    <inv-toggle full-width size="xs" label="Label"></inv-toggle>
+    <inv-toggle full-width size="sm" label="Label"></inv-toggle>
+    <inv-toggle full-width size="lg" label="Label"></inv-toggle>
+
+    <p>Disabled intrinsic toggle</p>
+    <inv-toggle disabled label="Label"></inv-toggle>
+
+    <p>Subtle intrinsic toggles in all sizes</p>
+    <inv-toggle subtle label="Label"></inv-toggle>
+    <inv-toggle subtle size="xs" label="Label"></inv-toggle>
+    <inv-toggle subtle size="sm" label="Label"></inv-toggle>
+    <inv-toggle subtle size="lg" label="Label"></inv-toggle>
+
+    <p>Subtle full width toggles in all sizes</p>
+    <inv-toggle subtle full-width label="Label"></inv-toggle>
+    <inv-toggle subtle full-width size="xs" label="Label"></inv-toggle>
+    <inv-toggle subtle full-width size="sm" label="Label"></inv-toggle>
+    <inv-toggle subtle full-width size="lg" label="Label"></inv-toggle>
+
+    <p>Disabled subtle intrinsic toggle</p>
+    <inv-toggle subtle disabled label="Label"></inv-toggle>
+
+    <p>Checked disabled default and subtle intrinsic toggles</p>
+    <inv-toggle checked disabled label="Label"></inv-toggle>
+    <inv-toggle checked subtle disabled label="Label"></inv-toggle>
+    
+    <p>Icon only toggles in all sizes</p>
+    <inv-toggle icon-only><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle icon-only size="xs"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle icon-only size="sm"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle icon-only size="lg"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+
+    <p>Subtle icon only toggles in all sizes</p>
+    <inv-toggle subtle icon-only><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle subtle icon-only size="xs"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle subtle icon-only size="sm"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle subtle icon-only size="lg"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+
+    <p>Full width icon only toggles in all sizes, done to assert that full width does not break icon only mode</p>
+    <inv-toggle icon-only full-width><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle icon-only full-width size="xs"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle icon-only full-width size="sm"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+    <inv-toggle icon-only full-width size="lg"><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+
+    <p>Disabled icon only toggle</p>
+    <inv-toggle icon-only disabled><inv-icon slot="icon">palette</inv-icon></inv-toggle>
+
+    <p>Toggles with trailing icons in all sizes</p>
+    <inv-toggle label="Label"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle label="Label" size="xs"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle label="Label" size="sm"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle label="Label" size="lg"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+
+    <p>Full width toggles with trailing icons in all sizes</p>
+    <inv-toggle full-width label="Label"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle full-width label="Label" size="xs"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle full-width label="Label" size="sm"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle full-width label="Label" size="lg"><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+
+    <p>Disabled toggle with trailing icon</p>
+    <inv-toggle label="Label" disabled><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+
+    <p>Toggles with both icons in all sizes</p>
+    <inv-toggle label="Label"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle label="Label" size="xs"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle label="Label" size="sm"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle label="Label" size="lg"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+
+    <p>Full width toggles with both icons in all sizes</p>
+    <inv-toggle full-width label="Label"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle full-width label="Label" size="xs"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle full-width label="Label" size="sm"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+    <inv-toggle full-width label="Label" size="lg"><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
+
+    <p>Disabled toggle with both icons</p>
+    <inv-toggle label="Label" disabled><inv-icon slot="icon">exclamation</inv-icon><inv-icon slot="trailing-icon">keyboard_arrow_down</inv-icon></inv-toggle>
   </body>
 </html>

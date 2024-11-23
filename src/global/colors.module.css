@@ -1,0 +1,24 @@
+:root {
+    --in-color-background-neutral-default: rgba(9, 30, 66, 0.06);
+    --in-color-background-neutral-subtle-default: rgba(255, 255, 255, 0);
+    --in-color-background-disabled: rgba(9, 30, 66, 0.03);
+    --in-color-background-selected-bold-default: rgba(48, 56, 74, 1);
+    --in-color-background-neutral-hovered: rgba(9, 30, 66, 0.14);
+    --in-color-background-neutral-subtle-hovered: rgba(9, 30, 66, 0.06);
+    --in-color-background-selected-bold-hovered: rgba(75, 81, 96, 1);
+    --in-color-background-neutral-pressed: rgba(9, 30, 66, 0.31);
+    --in-color-background-neutral-subtle-pressed: rgba(9, 30, 66, 0.14);
+    --in-color-background-selected-bold-pressed: rgba(91, 98, 111, 1);
+
+    --in-color-border-default: rgba(9, 30, 66, 0.14);
+    --in-color-border-disabled: rgba(9, 30, 66, 0.06);
+    --in-color-border-selected: rgba(48, 56, 74, 1);
+
+    --in-color-text-default: rgba(23, 43, 77, 1);
+    --in-color-text-disabled: rgba(9, 30, 66, 0.31);
+    --in-color-text-inverse: rgba(255, 255, 255, 1);
+
+    --in-color-icon-default: rgba(68, 84, 111, 1);
+    --in-color-icon-disabled: rgba(9, 30, 66, 0.31);
+    --in-color-icon-inverse: rgba(255, 255, 255, 1);
+}
